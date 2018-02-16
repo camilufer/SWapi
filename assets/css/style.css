@@ -1,0 +1,29 @@
+/*colors
+amarillo:#FFE821;
+*/
+
+body{
+	background-image: url(../img/galaxy1.gif)
+}
+
+.logo{
+	height: 20em;
+}
+
+.btn{
+	background-color: #FFE821;
+}
+
+.swimg{
+	margin-top: 2em;
+    cursor: pointer;
+	height: 12em;
+}
+
+.info{
+	color: #FFE821;
+}
+
+.search-container, .info-container{
+	margin-left: 2em;
+}
