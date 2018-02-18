@@ -4,11 +4,11 @@ let height 		= document.querySelector('#height')
 let gender 		= document.querySelector('#gender')
 let mass 		= document.querySelector('#mass')
 let birthYear 	= document.querySelector('#birthYear')
-let films 		= document.querySelector('#films')
+
 
 function getInfo() {
 	updateWidthLoading()
-	axios.get('https://swapi.co/api/people/41').then(function(response){
+	axios.get('https://swapi.co/api/people/1').then(function(response){
 	updateInfo(response.data)
 }).catch(e => {
 	updateInfoError()
@@ -22,7 +22,7 @@ function updateInfo(data) {
 	gender.innerText = `Gender: ${data.gender}`
 	mass.innerText = `Mass: ${data.mass}`
 	birthYear.innerText = `Birth Year: ${data.birth_year}`
-	films.innerText = `Films: ${data.films}`
+	
 
 }
 
@@ -32,7 +32,7 @@ function updateInfoError() {
 	gender.innerText = ''
 	mass.innerText = ''
 	birthYear.innerText = ''
-	films.innerText = ''
+	
 }
 
 function updateWidthLoading() {
@@ -41,7 +41,7 @@ function updateWidthLoading() {
 	gender.innerText = ''
 	mass.innerText = ''
 	birthYear.innerText = ''
-	films.innerText = ''
+	
 }
 
 
