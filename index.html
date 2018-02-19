@@ -5,6 +5,7 @@
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo" rel="stylesheet">
 	<link rel="stylesheet" href="assets/css/style.css">
 	<title>SWapi</title>
 	<link rel="icon" href="assets/img/dv2.ico">
@@ -17,12 +18,13 @@
 <a href="http://instagram.com/starwars"><i class="social-icon fa fa-instagram"></i></a>
 <a href="https://plus.google.com/+StarWars/posts"><i class="social-icon fa fa-google-plus-square""></i></a>
 <a href="http://www.youtube.com/user/starwars"><i class="social-icon fa fa-youtube"></i></a>
-
+<audio style="width: 10em;" class="audio" src="assets/audio/star-wars-theme-song.mp3" controls>
+</audio>
 	<form class="navbar-form navbar-right" role="search">
 
   <div class="search-container row form-group">
   
-    <input type="text" class="form-control" placeholder="Search Star Wars">
+    <input type="text" id="search-bar" class="form-control" placeholder="Search Star Wars">
   </div>
   <button type="button" id="button" class="btn btn-default">Search</button>
 </form>
@@ -31,62 +33,74 @@
 <div class="img-fondo container-fluid">
 	<div class="row">
 	<div class="col-md-6">
-		<img class="logo" src="assets/img/Star_Wars_Logo..png" alt="">
-		<div class="info-container">
-				<h1 class="info" id="name"></h1>
-				<p class="info" id="height"></p>
-				<p class="info" id="gender"></p>
-				<p class="info" id="mass"></p>
-				<p class="info" id="birthYear"></p>	
-			</div>		
+		<img class="logo" src="assets/img/Star_Wars_Logo.png" alt="">
+    
+		
+			<div id="swinfo" class="row info-container">
+      <div class="col-md-12 col-lg-12">
+        <div id="pokeInfo">
+          
+        </div>
+      </div>
+    </div>
+				
 	</div>
-	<div class="col-md-6">
-		<div class="img-container row">
-    <a class="col-md-3 col-xs-3 img-responsive" href=""><img id="luke" class="swimg" src="assets/img/luke-skywalker.png" alt=""></a>
-		<a class="col-md-3 col-xs-3 img-responsive" href=""><img id="c3po" class="swimg" src="assets/img/c3p2.png" alt=""></a>
-		<a class="col-md-3 col-xs-3 img-responsive" href=""><img id="r2d2" class="swimg" src="assets/img/r2-d2.png" alt=""></a>
-    <a class="col-md-3 col-xs-3 img-responsive" href=""><img id="darthvader" class="swimg" src="assets/img/darth-vader.png" alt=""></a>	
+	<div class="img-container col-md-6">
+		<div class="cont-row row">
+    <div class="col-md-3 col-xs-3 picture swimg"><img src="assets/img/luke.png" alt="Luke Skywalker"></div>
+    <div class="col-md-3 col-xs-3 picture swimg"><img src="assets/img/c3po.png" alt="C-3PO"></div>
+    <div class="col-md-3 col-xs-3 picture swimg"><img src="assets/img/r2d2.png" alt="R2D2"></div>
+		<div class="col-md-3 col-xs-3 picture swimg"><img src="assets/img/darthvader.png" alt="Darth Vader"></div>
 		</div>
-		<div class="row">
-    <a class="col-md-3 col-xs-3" href=""><img id="leia" class="swimg" src="assets/img/leia-organa.png" alt=""></a>
-		<a class="col-md-3 col-xs-3" href=""><img id="anakin" class="swimg" src="assets/img/anakin-skywalker.png" alt=""></a>
-		<a class="col-md-3 col-xs-3" href=""><img id="chewbacca" class="swimg" src="assets/img/chewbacca.png" alt=""></a>
-		<a class="col-md-3 col-xs-3" href=""><img id="hansolo" class="swimg" src="assets/img/han-solo.png" alt=""></a>
+
+		<div class="cont-row row">
+    <div class="col-md-3 col-xs-3 picture swimg"><img src="assets/img/leia.png" alt="Leia Organa"></div>
+    <div class="col-md-3 col-xs-3 picture swimg"><img src="assets/img/anakin.png" alt="Anakin Skywalker"></div>
+    <div class="col-md-3 col-xs-3 picture swimg"><img src="assets/img/chewbacca.png" alt="Chewbacca"></div>
+    <div class="col-md-3 col-xs-3 picture swimg"><img src="assets/img/hansolo.png" alt="Han Solo"></div>
 		</div>
-		<div class="row">
-    <a class="col-md-3 col-xs-3" href=""><img id="jabba" class="swimg" src="assets/img/jabba-the-hut.png" alt=""></a>
-		<a class="col-md-3 col-xs-3" href=""><img id="anakin" class="swimg" src="assets/img/anakin-skywalker.png" alt=""></a>
-    <a class="col-md-3 col-xs-3" href=""><img id="chewbacca" class="swimg" src="assets/img/chewbacca.png" alt=""></a>
-    <a class="col-md-3 col-xs-3" href=""><img id="hansolo" class="swimg" src="assets/img/han-solo.png" alt=""></a>
+
+		<div class="cont-row row">
+    <div class="col-md-3 col-xs-3 picture swimg"><img src="assets/img/jabba.png" alt="Jabba"></div>
+    <div class="col-md-3 col-xs-3 picture swimg"><img src="assets/img/obiwankenobi.png" alt="Obi Wan Kenobi"></div>
+    <div class="col-md-3 col-xs-3 picture swimg"><img src="assets/img/darthmaul.png" alt="Darth Maul"></div>
+    <div class="col-md-3 col-xs-3 picture swimg"><img src="assets/img/lorsantekka.png" alt="Lor San Tekka"></div>
 		</div>
-		<div class="row">
-		<a class="col-md-3 col-xs-3" href=""><img id="leia" class="swimg" src="assets/img/leia-organa.png" alt=""></a>
-    <a class="col-md-3 col-xs-3" href=""><img id="anakin" class="swimg" src="assets/img/anakin-skywalker.png" alt=""></a>
-    <a class="col-md-3 col-xs-3" href=""><img id="chewbacca" class="swimg" src="assets/img/chewbacca.png" alt=""></a>
-    <a class="col-md-3 col-xs-3" href=""><img id="hansolo" class="swimg" src="assets/img/han-solo.png" alt=""></a>
+
+		<div class="cont-row row">
+    <div class="col-md-3 col-xs-3 picture swimg"><img src="assets/img/lando.png" alt="Lando"></div>
+    <div class="col-md-3 col-xs-3 picture swimg"><img src="assets/img/bailorgana.png" alt="Bail Organa"></div>
+    <div class="col-md-3 col-xs-3 picture swimg"><img src="assets/img/darthsidious.png" alt="Darth Sidious"></div>
+    <div class="col-md-3 col-xs-3 picture swimg"><img src="assets/img/padme.png" alt="Padmé"></div>
+	
 		</div>
 	</div>   
 	</div>
 </div>
 <div class="container-footer container-fluid"> 
 <footer class="col-md-12 col-xs-12">
-<h2>Follow Star Wars:</h2>
+<h2></h2>
 <img class="text-center img-responsive img-footer" src="assets/img/dv2.png" alt="">
 <p>TM & © Lucasfilm Ltd. All Rights Reserved</p>
 <ul>
-  <li>Terms of Use |</li>
-  <li>Legal Notices |</li>
-  <li>Privacy Policy |</li>
-  <li>Children’s Online Privacy Policy |</li>
-  <li>Your California Privacy Rights |</li>
-  <li>Star Wars at shopDisney |</li>
-  <li>Star Wars Helpdesk</li>
-  <li>Interest-Based Ads</li>
+  <li><a href="_blank">Terms of Use</a> |</li>
+  <li><a href="_blank">Legal Notices</a> |</li>
+  <li><a href="_blank">Privacy Policy</a> |</li>
+  <li><a href="_blank">Children’s Online Privacy Policy</a> |</li>
+  <li><a href="_blank">Your California Privacy Rights</a> |</li>
+  <li><a href="_blank">Star Wars at shopDisney</a> |</li>
+  <li><a href="_blank">Star Wars Helpdesk</a> |</li>
+  <li><a href="_blank">Interest-Based Ads</a></li>
 </ul>
 
 </footer>
   
 </div>
+<section>
+    <div class="modal fade" id="modalswInfo" tabindex="-1" role="dialog">
+
+    </div>
+  </section>
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.17.1/axios.min.js"></script>

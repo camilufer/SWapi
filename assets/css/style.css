@@ -1,6 +1,10 @@
 /*colors
 amarillo:#FFE821;
 */
+*{
+	font-family: 'Nanum Myeongjo', serif;
+}
+
 .img-navbar{
 	background-color: #232B2D;
 }
@@ -21,6 +25,12 @@ amarillo:#FFE821;
 
 .img-container{
 	margin-top: 1em;
+	margin-bottom: 1em;
+
+}
+
+.cont-row{
+	margin:1em;
 }
 
 .logo{
@@ -98,7 +108,7 @@ amarillo:#FFE821;
 	margin-top: 1em;
 }
 
-h2, p{
+h1, h2, p{
 	color: #787878;
 	font-size: 1.5em;
 	display: flex;
@@ -113,6 +123,10 @@ h2, p, ul{
 	margin-top: 0.6em;
 }
 
+h1{
+	font-weight: bold;
+}
+
 p{
 	font-size: 1em;
 }
@@ -124,4 +138,35 @@ p{
 li{
      display: inline;
 	color: #787878;
+}
+
+a{
+	color: #787878;
+}
+
+a:hover{
+	color: #FFE821;
+}
+
+.audio{
+	margin-top: 0.6em;
+	margin-left: 2em;
+	background-color: red;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 1em;
+}
+
+
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #FFE821; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #787878; 
 }
